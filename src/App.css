@@ -12,14 +12,14 @@
   text-align: center;
   width: 90%;
   margin: auto;
-  
+
   border-left: 10px solid #45DEFF;
   border-right: 10px solid #45DEFF;
  
 }
 
 .withFooter {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
 }
 
 .withoutFooter {
@@ -29,6 +29,7 @@
 .main {
   width: calc(100% - 50px);
   margin: auto;
+  min-height: calc(100vh - 100px);
   height: 100%;
   border-left: 10px dotted #45DEFF;
   border-right: 10px dotted #45DEFF;

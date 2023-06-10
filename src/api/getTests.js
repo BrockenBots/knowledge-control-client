@@ -1,13 +1,13 @@
 import axios from 'axios'
 
 export const getTests = async () => {
-
-    const tests = axios.get('http://127.0.0.1:8000/api/v1/test/test_cat/', { params: { user_id: '1' } })
+    const user = JSON.parse(localStorage.getItem('user')).data.user_data
+    // console.log(user)
+    const tests = axios.get('http://127.0.0.1:8000/api/v1/test/test_cat/', { params: { user_id: user.id } })
     .then((data) => {
       return data.data.tests
     })
 
-    // fetch
     return tests
 }
 

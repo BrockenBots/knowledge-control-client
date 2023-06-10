@@ -21,7 +21,6 @@ const Tests = () => {
             background: '#FFFFFF',
             boxShadow: '0px 0px 7px rgba(0, 0, 0, 0.25)',
             borderRadius: '10px',
-            height: '150px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
@@ -37,6 +36,13 @@ const Tests = () => {
             fontSize: '24px',
             marginRight: '0',
             marginLeft: 'auto',
+        },
+        titleTests: {
+            height: '100px',
+            width: '100%',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
         }
       }
 
@@ -59,9 +65,9 @@ const Tests = () => {
         {tests.map((test) => {
             return (
                 <div style={styles.testBlockElement} key={test.id}>
-                    <div>
-                        <h2>{test.test_name}</h2>
-                        <h3 style={{color: '#838282'}}>{test.description}</h3>
+                    <div style={styles.titleTests}>
+                        <h2 style={{height: '50px'}}>{test.test_name}</h2>
+                        <h3 style={{height: '50px', color: '#838282'}}>{test.description}</h3>
                     </div>
                     
                     <button style={styles.invertbtn} onClick={() => startTest(test.id)}>Начать</button>

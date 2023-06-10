@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
-import { isLogged } from '../../api/Login';
+import { isLogged, Login } from '../../api/Login';
 import WaterMark from '../../elements/WaterMark'
 import goBackBtn from '../../assets/FuckGoBack.svg'
 import './style.css'
@@ -11,8 +11,10 @@ const LoginScreen = () => {
   const { register, handleSubmit } = useForm();
   const user = localStorage.getItem('user')
   const onFormSubmit  = data => {
-    localStorage.setItem('user',JSON.stringify(data))
-    navigate('/')
+    
+      Login(data.login, data.password)
+      navigate('/')
+    
   }
   
 
@@ -22,7 +24,7 @@ const LoginScreen = () => {
       <WaterMark/>
       <div className='loginWindow'>
         <div className='loginTitle'>Войдите чтобы начать тест</div>
-        <form style={{marginTop: 'auto'}} onSubmit={handleSubmit(onFormSubmit)}>
+          <form style={{marginTop: 'auto'}} onSubmit={handleSubmit(onFormSubmit)}>
           <div className='loginForm'>
             
             <div className='loginForm-input'>

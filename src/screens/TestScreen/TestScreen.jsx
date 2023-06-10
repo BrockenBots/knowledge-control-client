@@ -42,7 +42,7 @@ const TestScreen = () => {
                         </div>
                     )
                 }) : ''}
-                {/* <button onClick={() => test.questions.map((question) => console.log(question))}>a</button> */}
+                
             </div>
             </div>
         <Footer />

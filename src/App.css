@@ -1,0 +1,80 @@
+.App {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+  border-left: 10px solid #45DEFF;
+  border-right: 10px solid #45DEFF;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.main {
+  width: calc(100% - 50px);
+  margin: auto;
+  height: 100vh;
+  border-left: 10px dotted #45DEFF;
+  border-right: 10px dotted #45DEFF;
+}
+
+.goScreen-btn {
+  position: absolute;
+  top: 50%;
+  width: 100vw;
+  left: 0;
+  height: 90px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #45DEFF;
+}
+
+.btn {
+  background-color: #fff;
+  font-weight: 800;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  font-size: 24px;
+  height: 50px;
+  width: 200px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}

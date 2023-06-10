@@ -13,7 +13,8 @@ const Footer = () => {
         height: '100px',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        overflow: 'hidden',
     },
   }
 

@@ -19,7 +19,8 @@
 }
 
 .withFooter {
-  min-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
+  
 }
 
 .withoutFooter {
@@ -33,6 +34,7 @@
   height: 100%;
   border-left: 10px dotted #45DEFF;
   border-right: 10px dotted #45DEFF;
+  overflow: scroll;
 }
 
 .goScreen-btn {

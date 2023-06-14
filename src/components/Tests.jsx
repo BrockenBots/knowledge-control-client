@@ -62,7 +62,7 @@ const Tests = () => {
     
   return (
     <div style={styles.testBlock}>
-        {tests.map((test) => {
+        {tests !== null ? tests.map((test) => {
             return (
                 <div style={styles.testBlockElement} key={test.id}>
                     <div style={styles.titleTests}>
@@ -73,7 +73,7 @@ const Tests = () => {
                     <button style={styles.invertbtn} onClick={() => startTest(test.id)}>Начать</button>
                 </div>
             )
-        })}
+        }) : ''}
     </div>
   )
 }

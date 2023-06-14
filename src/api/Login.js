@@ -2,7 +2,7 @@ import axios from "axios"
 
 export const isLogged = () => {
     const user = JSON.parse(localStorage.getItem('user'))
-    if (user !== '') {
+    if (user !== null) {
       return true
     }
     else {
@@ -24,5 +24,5 @@ export const Login = (username, password) => {
     localStorage.setItem('user', JSON.stringify(userData))
     return JSON.stringify(userData)
   })
-  .catch(err => alert(err.message))
+  .catch(err => null)
 }

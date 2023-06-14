@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { isLogged, Login } from '../../api/Login';
 import WaterMark from '../../elements/WaterMark'
-import goBackBtn from '../../assets/FuckGoBack.svg'
+import goBackBtn from '../../assets/GoBack.svg'
 import './style.css'
 
 const LoginScreen = () => {
@@ -13,13 +13,18 @@ const LoginScreen = () => {
   const onFormSubmit  = data => {
     
       Login(data.login, data.password)
-      navigate('/')
+      alert('Wait a little')
+      setTimeout(() => {
+        navigate('/')
+        window.location.reload()
+      }, 500)
+      
     
   }
   
 
   return (
-    <div className={`App ${isLogged ? 'withFooter' : 'withoutFooter'}`} >
+    <div className={`App ${isLogged() ? 'withFooter' : 'withoutFooter'}`} >
       <div className='main'>
       <WaterMark/>
       <div className='loginWindow'>

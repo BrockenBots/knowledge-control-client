@@ -8,7 +8,7 @@ import { isLogged } from '../../api/Login'
 const MainScreen = () => {
 
   return (
-    <div className={`App ${isLogged ? 'withFooter' : 'withoutFooter'}`} >
+    <div className={`App ${isLogged() ? 'withFooter' : 'withoutFooter'}`} >
       <div className='main'>
         <WaterMark/>
         <Tests/>

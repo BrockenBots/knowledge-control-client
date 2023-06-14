@@ -3,7 +3,7 @@ import { isLogged } from '../../api/Login'
 
 const StartScreen = () => {
   return (
-    <div className={`App ${isLogged ? 'withFooter' : 'withoutFooter'}`} >
+    <div className={`App ${isLogged() ? 'withFooter' : 'withoutFooter'}`} >
       <div className='main'>
         <h1>ООО "ДОНСКОЙ МЯСНИК"</h1>
         <h2>Контроль знаний сотрудников</h2>

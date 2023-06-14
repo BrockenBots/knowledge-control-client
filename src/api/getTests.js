@@ -1,14 +1,20 @@
 import axios from 'axios'
 
 export const getTests = async () => {
-    const user = JSON.parse(localStorage.getItem('user')).data.user_data
-    // console.log(user)
-    const tests = axios.get('http://127.0.0.1:8000/api/v1/test/test_cat/', { params: { user_id: user.id } })
-    .then((data) => {
-      return data.data.tests
-    })
+    const user = JSON.parse(localStorage.getItem('user'))
+    
+    if (user !== null) {
+      // alert(user)
+      const tests = axios.get('http://127.0.0.1:8000/api/v1/test/test_cat/', { params: { user_id: user.data.user_data.id } })
+      .then((data) => {
+        return data.data.tests
+      })
 
-    return tests
+      return tests
+    }
+    
+
+    
 }
 
 export const currentTest = async (test_id) => {
